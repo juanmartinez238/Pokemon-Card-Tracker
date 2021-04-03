@@ -36,7 +36,7 @@ code {
 }
 
 .landing-Hero h1 {
-  padding-top: 3rem;
+  padding-top: 1rem;
   font-weight: bold;
 }
 
@@ -44,12 +44,17 @@ code {
   height: 60vh;
   display: flex;
   justify-content: space-evenly;
-  padding-top: 6rem;
+  padding-top: 7rem;
   background: rgb(31, 28, 26);
 }
 
 .landing-Bottom-Header {
+  padding-top: 3rem;
   color: white;
+}
+
+.landing-Bottom-Text {
+  width: 40vw;
 }
 
 .landing-Bottom-Button {
