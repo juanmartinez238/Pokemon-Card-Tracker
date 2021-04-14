@@ -11,7 +11,6 @@ function Browse() {
         const fetchData = async () => {
             const result = await axios.get(`${url}`);
             setData(result.data.data);
-            console.log(result.data.data);
         }
     
         try{
@@ -23,9 +22,10 @@ function Browse() {
     },[])
 
     return (
-        <div className='card-Container'>
-        {data.length > 0 && data.map(pokemon => 
-        <Card key={pokemon.id} {...pokemon}/>)}
+        <div className='browse-Container'>
+           <div><h1>Browse Cards</h1></div>
+            <div className="card__container">  {data.length > 0 && data.map(pokemon => 
+        <Card key={pokemon.id} {...pokemon}/>)}</div>
         </div>
     )
 }
