@@ -12,10 +12,33 @@ code {
     monospace;
 }
 
-.card-Container {
+.browse-Container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0% auto;
+}
+
+.card__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.card {
+  margin: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.card__name {
+  font-family: "Roboto", sans-serif;
+  border: 1px solid rgb(9, 21, 133);
+}
+
+.card__holofoil .card__reverseHolo {
+  font-family: "Roboto", sans-serif;
 }
 
 .landing-Hero {
