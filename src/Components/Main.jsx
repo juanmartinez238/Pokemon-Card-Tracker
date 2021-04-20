@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Landing from './Landing';
 import Browse from './Browse'
-
+import Finder from './Finder';
 
 function Main() {
     return (
@@ -11,6 +11,7 @@ function Main() {
             <Switch>
                 <Route exact path='/' component={Landing}/>
                 <Route exact path='/browse' component={Browse}/>
+                <Route exact path='/finder' component={Finder}/>
             </Switch>
             </BrowserRouter>
         </div>
