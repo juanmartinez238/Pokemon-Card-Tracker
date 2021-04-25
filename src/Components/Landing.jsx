@@ -14,10 +14,13 @@ function Landing() {
                 <div className="landing-Bottom-Text">
                 <h2>Welcome to the Pokémon Card Tracker</h2>
                 <p>Thanks for stopping by! This app was inspired by the nostalgic 
-                Pokémon Trading Card Game many kids grew up with in the 90's. 
+                Pokémon Trading Card Game many kids grew up with in the 90's. Pokémon cards
+                are actually still popular today and we can aid in your quest to locate card prices.
                 </p>
+                <p>What would you like to do today?</p>
                 </div>
-                <button className='landing-Bottom-Button'><Link to='/browse' style={{textDecoration:'none', color:'white'}}>Get Started</Link></button>
+                <button className='landing-Bottom-Button'><Link to='/browse' style={{textDecoration:'none', color:'white'}}>Browse Cards</Link></button>
+                <button><Link to='/finder' style={{textDecoration:'none', color:'black'}}>Find Card</Link></button>
                 </div>
                 <div className='image-Container'><img className='landing-Bottom-Image' src='https://upload.wikimedia.org/wikipedia/en/thumb/0/09/AshXYanime.png/220px-AshXYanime.png' alt='pokemon picture'/></div>
             </div>
