@@ -14,11 +14,16 @@ function Finder() {
 
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        const url = "https://api.pokemontcg.io/v2/cards?q=name:";
-        const response = await axios.get(`${url}${card}`);
-        console.log("this is response", response.data.data);
-        setData(response.data.data);
+        try{
+            e.preventDefault();
+            const url = "https://api.pokemontcg.io/v2/cards?q=name:";
+            const response = await axios.get(`${url}${card}`);
+            console.log("this is response", response.data.data);
+            setData(response.data.data);
+        }catch (err){
+            console.log(err)
+        }
+ 
     }
     return (
         <div>

@@ -9,8 +9,13 @@ function Browse() {
         const url = `https://api.pokemontcg.io/v2/cards`;
     
         const fetchData = async () => {
-            const result = await axios.get(`${url}`);
-            setData(result.data.data);
+            try{
+                const result = await axios.get(`${url}`);
+                setData(result.data.data);
+            }catch(err){
+                console.log(err)
+            }
+      
         }
     
         try{
