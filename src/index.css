@@ -221,3 +221,18 @@ button:focus::before {
   height: 50%;
   width: 100%;
 }
+
+.finder__container {
+  background-color: teal;
+  /* background-color: rgb(214, 79, 38); */
+}
+
+.finder__cardcont {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.finder__card {
+  margin: 1rem;
+}
