@@ -19,8 +19,14 @@ function Landing() {
                 </p>
                 <p>What would you like to do today?</p>
                 </div>
-                <button className='landing-Bottom-Button'><Link to='/browse' style={{textDecoration:'none', color:'white'}}>Browse Cards</Link></button>
-                <button><Link to='/finder' style={{textDecoration:'none', color:'black'}}>Find Card</Link></button>
+                <div className="buttons__container">
+                <div>
+             <Link to='/browse' className='landing-Bottom-Button' style={{textDecoration:'none', color:"black"}}>Browse Cards</Link>
+             </div>
+                <div>
+               <Link to='/finder' className='fin__button' style={{textDecoration:'none', color:"black"}}>Find Card</Link>
+                </div>
+                </div>
                 </div>
                 <div className='image-Container'><img className='landing-Bottom-Image' src='https://upload.wikimedia.org/wikipedia/en/thumb/0/09/AshXYanime.png/220px-AshXYanime.png' alt='pokemon picture'/></div>
             </div>

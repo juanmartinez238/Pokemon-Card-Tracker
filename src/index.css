@@ -80,10 +80,138 @@ code {
   width: 40vw;
 }
 
+.buttons__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Browse Button */
 .landing-Bottom-Button {
-  padding: 0.5rem;
-  background-color: #3369ff;
-  border-radius: 5%;
+  margin-top: 1rem;
+  min-width: 10rem;
+  min-height: 2rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #d16d4f;
+  background: linear-gradient(
+    90deg,
+    rgb(221, 64, 17) 0%,
+    rgb(235, 207, 196) 100%
+  );
+  border: none;
+
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+/* RINGS AROUND BUTTON */
+
+.landing-Bottom-Button::before {
+  content: "";
+  min-width: calc(10rem + 12px);
+  min-height: calc(2rem + 12px);
+  border: 0.5rem solid #413d85;
+  box-shadow: 0 0 20px rgba(0, 255, 203, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.landing-Bottom-Button:hover::before,
+.landing-Bottom-Button:focus::before {
+  opacity: 0.5;
+}
+
+.landing-Bottom-Button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #0026ff;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* FINDER PAGE BUTTON */
+
+/* Button itself */
+.fin__button {
+  margin-left: 3rem;
+  margin-top: 1rem;
+  min-width: 10rem;
+  min-height: 2rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #d16d4f;
+  background: linear-gradient(
+    90deg,
+    rgb(221, 64, 17) 0%,
+    rgb(235, 207, 196) 100%
+  );
+  border: none;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+/* RINGS AROUND BUTTON */
+
+.fin__button::before {
+  content: "";
+  min-width: calc(7rem + 12px);
+  min-height: calc(2rem + 12px);
+  border: 0.5rem solid #413d85;
+  box-shadow: 0 0 20px rgba(0, 255, 203, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.fin__button:hover::before,
+button:focus::before {
+  opacity: 0.5;
+}
+
+.fin__button::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 2px solid #0026ff;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fin__button:hover::after,
+.fin__button:focus::after {
+  animation: none;
+  display: none;
 }
 
 .image-Container {
@@ -92,4 +220,19 @@ code {
 .landing-Bottom-Image {
   height: 50%;
   width: 100%;
+}
+
+.finder__container {
+  background-color: teal;
+  /* background-color: rgb(214, 79, 38); */
+}
+
+.finder__cardcont {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.finder__card {
+  margin: 1rem;
 }

@@ -14,24 +14,34 @@ function Finder() {
 
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        const url = "https://api.pokemontcg.io/v2/cards?q=name:";
-        const response = await axios.get(`${url}${card}`);
-        console.log("this is response", response.data.data);
-        setData(response.data.data);
+        try{
+            e.preventDefault();
+            const url = "https://api.pokemontcg.io/v2/cards?q=name:";
+            const response = await axios.get(`${url}${card}`);
+            console.log("this is response", response.data.data);
+            setData(response.data.data);
+        }catch (err){
+            console.log(err)
+        }
+ 
     }
     return (
-        <div>
+        <div className="finder__container">
+            <form onSubmit={handleSubmit}>
             {console.log("this is data", data)}
             <label>Search for card</label>
             <input value={card} type="text" placeholder="type card name" onChange={handleChange}/>
-            <button type="submit" onClick={handleSubmit}>Find Card</button>
+            <button type="submit">Find Card</button>
+            </form>
+            
             {/* CARD WILL GO HERE */}
-            <div>
+            <div className="finder__cardcont">
                 {data.map((card) => {
                     console.log("this is card", card.images)
                     return(
+                        <div className="finder__card">
                         <img src={card.images.small} />
+                        </div>
                     )
                 })}
             </div>
